@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'Aristotelica Display Trial';
+  src: url('AristotelicaDisplayTrial-Regular.eot');
+  src: local('Aristotelica Display Trial Regular'), local('AristotelicaDisplayTrial-Regular'),
+    url('AristotelicaDisplayTrial-Regular.eot?#iefix') format('embedded-opentype'),
+    url('AristotelicaDisplayTrial-Regular.woff2') format('woff2'),
+    url('AristotelicaDisplayTrial-Regular.woff') format('woff'),
+    url('AristotelicaDisplayTrial-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

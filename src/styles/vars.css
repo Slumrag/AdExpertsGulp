@@ -1,0 +1,24 @@
+:root,
+:root::backdrop {
+  --rem-to-px: calc(1rem / 16);
+  /*telegram icon*/
+  --clr-blue-800: rgba(78, 77, 109, 0.5);
+  --clr-blue-600: rgba(174, 173, 212, 0.5);
+
+  --clr-blue-300: rgba(159, 185, 225, 0.5);
+  --clr-blue-200: rgba(176, 203, 245, 0.5);
+  --clr-blue-100: rgba(226, 238, 255, 0.5);
+
+  --clr-text-dark: #000000;
+  --clr-text-accent: #516c96;
+  --clr-text-light: #ffffff;
+  --font-scale: 1;
+  --logo-font: normal calc(var(--rem-to-px) * 53 * var(--font-scale)) / 1
+    'Aristotelica Display Trial';
+
+  --header-font: normal calc(var(--rem-to-px) * 53 * var(--font-scale)) / 1 'TT Firs Neue';
+  --content-font: normal calc(var(--rem-to-px) * 24 * var(--font-scale)) / 1 'TT Firs Neue';
+  --content-font-demibold: 600 calc(var(--rem-to-px) * 36 * var(--font-scale)) / 1 'TT Firs Neue';
+
+  --max-width: calc(var(--rem-to-px) * 1160);
+}

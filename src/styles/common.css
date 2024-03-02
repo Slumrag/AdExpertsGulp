@@ -1,0 +1,73 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  /* font-size: 10px; */
+  scroll-behavior: smooth;
+}
+
+body {
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font: var(--header-font), serif;
+}
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font: var(--content-font), sans-serif;
+  overflow-x: hidden;
+}
+.container {
+  max-width: var(--max-width);
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 1rem;
+  box-sizing: content-box;
+  /* outline: 1px solid red; */
+}
+.container * {
+  box-sizing: border-box;
+}
+.container__title {
+}
+.logo {
+  font: var(--logo-font);
+  display: flex;
+  align-items: center;
+}
+.logo__link img {
+  margin-right: 5px;
+}
+.full-width {
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+  z-index: -1;
+}
+.bg-tile {
+  --tile-size: 120px;
+  z-index: -1;
+  position: absolute;
+  --_tile-position: var(--tile-position-x) var(--tile-position-y);
+  --_tile-dimensions: var(--tile-size) var(--tile-size);
+  --_tile-size: var(--tile-size);
+  --_tile-color: var(--tile-color);
+
+  top: var(--tile-position-y);
+  left: var(--tile-position-x);
+  width: var(--_tile-size);
+  height: var(--_tile-size);
+  background-color: var(--_tile-color);
+}
