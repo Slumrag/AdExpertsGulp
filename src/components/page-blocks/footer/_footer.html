@@ -1,22 +1,17 @@
 <footer class="footer container">
-  <h4 class="footer__logo logo">
-    <a class="logo__link" href="."><img src="img/icons/ADlogo.svg" alt="AD" />Experts</a>
+  <h4 class="footer__logo">
+    @@include('../../bem-blocks/logo/_logo.html')
   </h4>
 
-  <a href="" class="document"
-    ><img src="img/icons/document-icon.svg" alt="document icon" />Документы</a
-  >
-
-  <div class="contacts__divider">|</div>
   <ul class="footer__contacts">
+    <li>
+      <a class="footer__social" href="https://www.telegram.org" title="наш телеграмм"><img
+          src="img/icons/telegram-icon.svg" alt="telegram icon" class="telegrem-icon" /></a>
+    </li>
     <li>
       <a href="mailto:info@adexpert.ru" class="footer__mail">info@adexpert.ru</a>
     </li>
-    <li><a href="tel:+7(999)999-99-99" class="footer__phone">+7 (999)999-99-99</a></li>
-    <li>
-      <a class="footer__social" href="https://www.telegram.org" title="наш телеграмм"
-        ><img src="img/icons/telegram-icon.svg" alt="telegram icon" class="telegrem-icon"
-      /></a>
-    </li>
+    <li>@@include('../../bem-blocks/contact-link/_contact-link.html')</li>
+
   </ul>
 </footer>

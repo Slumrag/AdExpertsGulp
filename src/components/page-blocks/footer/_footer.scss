@@ -4,32 +4,20 @@
   align-items: center;
   padding-top: 4rem;
   padding-bottom: 4rem;
-}
-.footer__logo {
-  flex: 1;
-}
-.logo {
-}
-.logo__link {
-}
-.document {
-  color: var(--clr-text-accent);
-}
-.footer__contacts {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: var(--clr-text-accent);
-  font: var(--content-font-demibold);
-  font-size: calc(var(--rem-to-px) * 24);
-  gap: 3rem;
-}
-.footer__mail {
-}
-.footer__phone {
-}
-.footer__social {
-}
-.contacts__divider {
-  margin: 0 2rem;
+  &__logo {
+    flex: 1;
+  }
+
+  &__contacts {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--clr-text-accent);
+
+    gap: 3rem;
+  }
+  &__mail {
+    font: var(--content-font-demibold);
+    font-size: calc(var(--rem-to-px) * 24);
+  }
 }

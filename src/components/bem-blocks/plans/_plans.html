@@ -3,46 +3,40 @@
   <h2 class="plans__title">Наши тарифы</h2>
 
   <div class="plans__cards">
-    <div class="plans__card plan-card">
-      <p class="plan-card__name">Стартовый</p>
-      <ul class="plan-card__options">
-        <li>Сервер с настроенным доступом для Revit server на 3 пользователей</li>
-        <li class="plan-card__divider"></li>
-        <li>Инструкция по подключению</li>
-        <li class="plan-card__divider"></li>
-        <li>Сопровождение по совместной работе до 2-х часов</li>
-      </ul>
-      <p class="plan-card__price">7 000 ₽/месяц</p>
-    </div>
-
-    <div class="plans__card plan-card plan-card_center">
-      <p class="plan-card__name">Базовый</p>
-      <ul class="plan-card__options">
-        <li>Все опции тарифа Стартовый</li>
-        <li class="plan-card__divider"></li>
-        <li>Доступ для 10 пользователей</li>
-        <li class="plan-card__divider"></li>
-        <li>Бэкап данных сервера 2 раза в месяц</li>
-        <li class="plan-card__divider"></li>
-        <li>Сопровождение по совместной работе до 5-ти часов</li>
-      </ul>
-      <p class="plan-card__price">10 000 ₽/месяц</p>
-    </div>
-    <div class="plans__card plan-card">
-      <p class="plan-card__name">Премиум</p>
-      <ul class="plan-card__options">
-        <li>Все опции тарифа Базовый</li>
-        <li class="plan-card__divider"></li>
-        <li>Доступ для 25 пользователей</li>
-        <li class="plan-card__divider"></li>
-        <li>Бэкап данных сервера 4 раза в месяц</li>
-        <li class="plan-card__divider"></li>
-        <li>Сопровождение по совместной работе до 10-ти часов</li>
-        <li class="plan-card__divider"></li>
-        <li>Возможность расширения условий работы</li>
-      </ul>
-      <p class="plan-card__price">15 000 ₽/месяц</p>
-    </div>
+    @@loop('plan-card/_plan-card.html',[
+    {
+    "title": "Стартовый",
+    "classes": "",
+    "price": "25 000 ₽/месяц",
+    "bullet": {
+    "one": " ✓",
+    "two": "5",
+    "three": "1 час",
+    "four": "1 раз./мес."
+    }
+    },
+    {
+    "title": "Базовый",
+    "classes": "plan-card_center",
+    "price": "50 000 ₽/месяц",
+    "bullet": {
+    "one": " ✓",
+    "two": "15",
+    "three": "5 часов",
+    "four": "2 раз./мес."
+    }
+    },
+    {
+    "title": "Премиум",
+    "classes": "",
+    "price": "По запросу",
+    "bullet": {
+    "one": " ✓",
+    "two": "от 25",
+    "three": "10 часов",
+    "four": "4 раз./мес."
+    }
+    }
+    ])
   </div>
-  <a class="plans__nda" href=".">Соглашение об NDA</a>
 </section>

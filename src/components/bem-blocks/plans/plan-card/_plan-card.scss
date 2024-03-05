@@ -1,0 +1,47 @@
+.plan-card {
+  --color: #f1f6ff;
+  padding: 5rem 0 6rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  align-items: center;
+  background-color: var(--color);
+  font-size: calc(var(--rem-to-px) * 18);
+  grid-row: 2;
+
+  &_center {
+    align-self: stretch;
+    grid-row: -1/1;
+    justify-self: center;
+    background-color: var(--clr-blue-300);
+  }
+
+  &__name,
+  &__price,
+  &__value {
+    font: var(--content-font-demibold);
+    color: var(--clr-text-accent);
+  }
+
+  &__value {
+    display: block;
+    font-weight: medium;
+    font-size: calc(var(--rem-to-px) * 24);
+    margin-top: 10px;
+  }
+
+  &__options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 75%;
+
+    gap: 1rem;
+    text-align: center;
+  }
+
+  &__option {
+  }
+}

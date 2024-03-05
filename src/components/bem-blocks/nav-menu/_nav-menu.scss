@@ -1,0 +1,22 @@
+.nav-menu {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 35px;
+
+  &__link {}
+}
+
+
+@media (max-width: 850px) {
+  .nav-menu {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+      display: grid;
+      justify-items: end;
+    }
+}

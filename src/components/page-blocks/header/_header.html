@@ -1,17 +1,6 @@
 <header class="header container">
-  <h1 class="header__logo logo">
-    <a class="logo__link" href="."><img src="img/icons/ADlogo.svg" alt="AD" />Experts</a>
+  <h1>
+    @@include('../../bem-blocks/logo/_logo.html')
   </h1>
-  <nav>
-    <menu class="nav-menu">
-      <li><a href="#advantages" class="nav-menu__link">Преимущества</a></li>
-      <li><a href="#plans" class="nav-menu__link">Тарифы</a></li>
-      <li class="nav-menu__divider">|</li>
-      <li>
-        <a href="" class="nav-menu__link document"
-          ><img src="img/icons/document-icon.svg" alt="document icon" />Документы</a
-        >
-      </li>
-    </menu>
-  </nav>
+  @@include('../../bem-blocks/nav-menu/_nav-menu.html')
 </header>
