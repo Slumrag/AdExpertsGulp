@@ -8,6 +8,8 @@
     "start": "gulp",
     "build": "gulp libs_style && gulp svg_css && gulp ttf && gulp fonts && gulp style && gulp libs_js && gulp build_js && gulp rastr && gulp webp && gulp svg_sprite && gulp html",
     "ftp": "gulp deploy",
+    "publish": "gh-pages -d build",
+    "deploy": "npm run build && npm run publish",
     "build-ftp": "npm run build && npm run ftp"
   },
   "author": "",
@@ -40,7 +42,8 @@
     "imagemin-jpeg-recompress": "^7.0.0",
     "imagemin-pngquant": "^9.0.2",
     "require-dir": "^1.2.0",
-    "vinyl-ftp": "^0.6.1"
+    "vinyl-ftp": "^0.6.1",
+    "gh-pages": "^6.1.1"
   },
   "dependencies": {
     "sass": "^1.56.0"
