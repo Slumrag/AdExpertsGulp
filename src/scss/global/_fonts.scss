@@ -1,3 +1,7 @@
-@include font-face('TT Firs Neue','TTFirsNeue/TTFirsNeue-Regular');
-@include font-face('TT Firs Neue','TTFirsNeue/TTFirsNeue-Demibold',600);
-@include font-face('Aristotelica Display Trial','Aristotelica/AristotelicaDisplayTrial-Regular');
+@include font-face('TT Firs Neue Regular', 'TT Firs Neue', 'TTFirsNeue/TTFirsNeue-Regular');
+@include font-face('TT Firs Neue DemiBold', 'TT Firs Neue', 'TTFirsNeue/TTFirsNeue-DemiBold', 600);
+@include font-face(
+  'Aristotelica Display Trial Regular',
+  'Aristotelica Display Trial',
+  'Aristotelica/AristotelicaDisplayTrial-Regular'
+);
