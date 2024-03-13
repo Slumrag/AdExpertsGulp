@@ -1,3 +1,18 @@
-.logo{
+.logo {
+  $logo-bp: 830px;
+  font: var(--logo-font);
   line-height: 0;
+  display: flex;
+  align-items: center;
+  &__image {
+    margin-right: 5px;
+    @media (max-width: $logo-bp) {
+      margin-right: 2px;
+
+      max-width: 32px;
+    }
+  }
+  @media (max-width: $logo-bp) {
+    font-size: 27px;
+  }
 }
