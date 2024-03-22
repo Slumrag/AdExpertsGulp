@@ -1,35 +1,58 @@
 .advantages {
-  // padding-top: 9rem;
-  // padding-bottom: 9rem;
+  --advantage-tile-size: 198px;
+
+  @media (max-width: $tablet) {
+    --advantage-tile-size: 120px;
+  }
+
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
 
   &__title {
-    margin-bottom: 100px;
+    margin-bottom: 2rem;
   }
 
   &__list {
-    --size: 198px;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(2, var(--size) auto);
+    grid-template-rows: repeat(2, var(--advantage-tile-size) auto);
     grid-template-areas:
       'odd1 . odd2 . odd3'
       'odd1 even1 odd2 even2 odd3'
       '. even1 . even2  .';
     grid-auto-flow: row;
     column-gap: 0px;
+    @media (max-width: $phone) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(5, var(--advantage-tile-size));
+      grid-template-areas:
+        '. odd1'
+        'even1 odd1'
+        'even1 odd2'
+        'even2 odd2'
+        'even2 odd3'
+        '. odd3';
+    }
   }
-
+  &__image {
+    max-width: 55%;
+  }
   &__item {
     position: relative;
-    max-width: var(--size);
+    max-width: var(--advantage-tile-size);
     display: flex;
     flex-direction: column;
     align-items: center;
     row-gap: 20px;
+
+    .image-wrapper {
+      width: var(--advantage-tile-size);
+      display: grid;
+      place-items: center;
+      aspect-ratio: 1;
+    }
 
     &[data-order='1'] {
       grid-area: odd1;
@@ -70,8 +93,10 @@
   &__text {
     text-align: center;
     font-size: 18px;
-    // line-height: 1.2;
     padding: 0 4px;
+    @media (max-width: $tablet) {
+      font-size: 14px;
+    }
   }
 
   .bg-images {
@@ -100,25 +125,17 @@
   }
 
   .bg-tile {
-    &:nth-child(1) {
+    &[data-order='1'] {
       --tile-position-x: calc(100% - 1.5 * var(--tile-size));
       --tile-position-y: calc(100% - 1.4 * var(--tile-size));
 
       --tile-color: var(--clr-blue-100);
     }
-    &:nth-child(2) {
+    &[data-order='2'] {
       --tile-position-x: calc(100% - 0.5 * var(--tile-size));
       --tile-position-y: calc(100% - 0.5 * var(--tile-size));
 
       --tile-color: var(--clr-blue-300);
     }
   }
-}
-
-.image-wrapper {
-  --size: 198px;
-  width: var(--size);
-  display: grid;
-  place-items: center;
-  aspect-ratio: 1;
 }
