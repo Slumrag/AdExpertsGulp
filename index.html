@@ -23,20 +23,38 @@
 		<header class="header container">
   <h1>
     <p class="logo">
-  <a class="logo__link" href="."><img src="img/icons/ADlogo.svg" alt="AD" />Experts</a>
+  <a class="logo__link" href="."><img class="logo__image" src="img/icons/ADlogo.svg" alt="AD" />Experts</a>
 </p>
   </h1>
   <nav>
   <menu class="nav-menu">
     <li><a href="#advantages" class="nav-menu__link">Преимущества</a></li>
     <li><a href="#plans" class="nav-menu__link">Тарифы</a></li>
-    <li><a href="" class="contact-link"
-  ><img src="img/icons/phone.svg" alt="phone icon" />Связаться с нами</a
->
-</li>
+    <li><a href="@@href" class="contact-link @@variant"><img src="img/icons/phone.svg" alt="phone icon" />Связаться с нами</a></li>
   </menu>
 </nav>
 
+  <div class="burger-menu">
+  <button class="burger-menu__button">
+    <div class=""></div>
+    <div class=""></div>
+    <div class=""></div>
+  </button>
+  <dialog class="burger-menu__dialog">
+    <div class="dialog-content">
+      <nav>
+        <menu class="burger-menu__nav">
+          <li><a href="#advantages" class="nav-menu__link">Преимущества</a></li>
+          <li><a href="#plans" class="nav-menu__link">Тарифы</a></li>
+          <li><a href="@@href" class="contact-link contact-link_button"><img src="img/icons/phone.svg" alt="phone icon" />Связаться с нами</a></li>
+        </menu>
+      </nav>
+      <a class="telegram-link burger-menu__telegram" href="#" title="наш телеграмм"><img src="img/icons/telegram-icon.svg"
+        alt="telegram icon" class="telegram-icon" />Наш телеграм</a>
+    </div>
+
+  </dialog>
+</div>
 </header>
 		<main>
   <section class="container headline">
@@ -57,14 +75,6 @@
 </section>
 
   <section class="container advantages" id="advantages">
-  <div class="bg-tile"></div>
-  <div class="bg-tile"></div>
-
-  <div class="bg-images">
-    <img class="bg-image" src="img/background-image.svg" alt="background image" />
-    <img class="bg-image" src="img/background-image.svg" alt="background image" />
-  </div>
-
   <h2 class="advantages__title container__title">Почему нас выбирают?</h2>
 
   <ul class="advantages__list">
@@ -99,18 +109,25 @@
       <p class="advantages__text">Коллективная работа по всему миру</p>
     </li>
   </ul>
-</section>
 
+  <div class="bg-tile" data-order="1"></div>
+  <div class="bg-tile" data-order="2"></div>
+
+  <div class="bg-images">
+    <img class="bg-image" src="img/background-image.svg" alt="background image" />
+    <img class="bg-image" src="img/background-image.svg" alt="background image" />
+  </div>
+</section>
   <section class="plans container" id="plans">
   <div class="bg-tile"></div>
-  <h2 class="plans__title">Наши тарифы</h2>
+  <h2 class="container__title plans__title">Наши тарифы</h2>
 
   <div class="plans__cards">
     <div class="plan-card ">
   <p class="plan-card__name">Стартовый</p>
   <ul class="plan-card__options">
     <li class="plan-card__option">Инструкция по настройке удаленного подключения <span
-        class="plan-card__value"> ✓</span></li>
+        class="plan-card__value">✓</span></li>
     <li class="plan-card__option">Количество одновременно работающих пользователей<span
         class="plan-card__value">5</span></li>
     <li class="plan-card__option">Количество часов технической поддержки<span
@@ -122,7 +139,7 @@
   <p class="plan-card__name">Базовый</p>
   <ul class="plan-card__options">
     <li class="plan-card__option">Инструкция по настройке удаленного подключения <span
-        class="plan-card__value"> ✓</span></li>
+        class="plan-card__value">✓</span></li>
     <li class="plan-card__option">Количество одновременно работающих пользователей<span
         class="plan-card__value">15</span></li>
     <li class="plan-card__option">Количество часов технической поддержки<span
@@ -134,7 +151,7 @@
   <p class="plan-card__name">Премиум</p>
   <ul class="plan-card__options">
     <li class="plan-card__option">Инструкция по настройке удаленного подключения <span
-        class="plan-card__value"> ✓</span></li>
+        class="plan-card__value">✓</span></li>
     <li class="plan-card__option">Количество одновременно работающих пользователей<span
         class="plan-card__value">от 25</span></li>
     <li class="plan-card__option">Количество часов технической поддержки<span
@@ -150,29 +167,26 @@
 		<footer class="footer container">
   <h4 class="footer__logo">
     <p class="logo">
-  <a class="logo__link" href="."><img src="img/icons/ADlogo.svg" alt="AD" />Experts</a>
+  <a class="logo__link" href="."><img class="logo__image" src="img/icons/ADlogo.svg" alt="AD" />Experts</a>
 </p>
   </h4>
 
   <ul class="footer__contacts">
     <li>
-      <a class="footer__social" href="https://www.telegram.org" title="наш телеграмм"><img
-          src="img/icons/telegram-icon.svg" alt="telegram icon" class="telegrem-icon" /></a>
+      <a class="telegram-link footer__telegram" href="#" title="наш телеграмм"><img src="img/icons/telegram-icon.svg"
+        alt="telegram icon" class="telegram-icon" /></a>
     </li>
     <li>
       <a href="mailto:info@adexpert.ru" class="footer__mail">info@adexpert.ru</a>
     </li>
-    <li><a href="" class="contact-link"
-  ><img src="img/icons/phone.svg" alt="phone icon" />Связаться с нами</a
->
-</li>
+    <li><a href="@@href" class="contact-link "><img src="img/icons/phone.svg" alt="phone icon" />Связаться с нами</a></li>
 
   </ul>
 </footer>
-		<script src="js/libs.min.js"></script>
-<script src="js/main.min.js"></script>
-
 	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="js/libs.min.js"></script>
+<script src="js/main.min.js"></script>
 </body>
 
 </html>
