@@ -6,6 +6,7 @@
 
   font-size: 18px;
   text-decoration: underline;
+  min-width: max-content;
   @media (max-width: $tablet) {
     font-size: 16px;
   }
