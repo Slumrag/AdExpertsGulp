@@ -6,4 +6,19 @@
 
   font-size: 18px;
   text-decoration: underline;
+  @media (max-width: $tablet) {
+    font-size: 16px;
+  }
+  &_button {
+    color: var(--clr-text-light);
+    background: var(--clr-blue-800);
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    img {
+      display: none;
+    }
+  }
 }

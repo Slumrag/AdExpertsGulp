@@ -4,11 +4,14 @@
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-
-}
-
-@media (max-width: 768px) {
-  .header {
+  position: relative;
+  z-index: 3;
+  @media (max-width: $tablet) {
     align-items: center;
+  }
+  .nav-menu {
+    @media (max-width: $phone) {
+      display: none;
+    }
   }
 }

@@ -1,0 +1,115 @@
+.burger-menu {
+  $burger-bg: #f1f6ff;
+  display: none;
+
+  @media (max-width: $phone) {
+    display: block;
+  }
+  &__button {
+    $element-height: 3px;
+    $animation-duration: 0.15s;
+
+    position: relative;
+    height: 20px;
+    width: 30px;
+    background: none;
+    div {
+      box-sizing: border-box;
+
+      position: absolute;
+      height: $element-height;
+      width: 100%;
+      border-radius: 5px;
+      background: var(--clr-text-dark);
+      &:nth-child(1) {
+        top: 0;
+      }
+      &:nth-child(2) {
+        top: calc(50% - $element-height / 2);
+      }
+      &:nth-child(3) {
+        bottom: 0;
+      }
+      transition-property: rotate, opacity, top;
+      transition-duration: $animation-duration;
+      transition-timing-function: ease-in-out;
+    }
+
+    &_active {
+      div {
+        &:nth-child(1) {
+          transform-origin: center;
+          rotate: 45deg;
+          top: calc(50% - $element-height / 2);
+        }
+        &:nth-child(2) {
+          opacity: 0;
+        }
+        &:nth-child(3) {
+          rotate: -45deg;
+          transform-origin: center;
+          top: calc(50% - $element-height / 2);
+        }
+      }
+    }
+  }
+
+  &__dialog {
+    position: fixed;
+
+    margin: 0;
+    top: 0;
+    z-index: -2;
+    width: 100%;
+
+    .dialog-content {
+      position: relative;
+      padding: 0 16px;
+      padding-top: 80px;
+      padding-bottom: 35px;
+      background: $burger-bg;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    nav {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      // justify-content: space-between;
+    }
+  }
+
+  &__header {
+    // display: flex;
+    // flex-direction: column;
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    flex: 1;
+    li:has(.contact-link) {
+      // flex: 1;
+      margin-top: auto;
+    }
+  }
+  &__telegram {
+    margin-top: 20px;
+    align-self: center;
+    color: var(--clr-text-accent);
+    .telegram-icon {
+      max-width: 30px;
+      height: 30px;
+    }
+  }
+}
+
+.dialog-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
