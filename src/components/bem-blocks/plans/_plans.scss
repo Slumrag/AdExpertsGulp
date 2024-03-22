@@ -1,7 +1,5 @@
 .plans {
   position: relative;
-  // padding-top: 6rem;
-  // padding-bottom: 4rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,10 +18,32 @@
   &__cards {
     align-items: center;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 2rem 1fr 2rem;
     column-gap: 1.5rem;
     align-items: stretch;
-    height: 100%;
+    // height: 100%;
+    .plan-card {
+      grid-row: 2;
+      &_center {
+        grid-row: -1 / 1;
+      }
+      @media (max-width: $phone) {
+        grid-row: auto;
+        &_center {
+          grid-row: auto;
+        }
+      }
+    }
+    @media (max-width: $tablet) {
+      grid-template-rows: 1rem 1fr 1rem;
+    }
+    @media (max-width: $phone) {
+      // background: #000;
+      row-gap: 1rem;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, 1fr);
+      grid-auto-flow: row;
+    }
   }
 }

@@ -1,6 +1,6 @@
 .plan-card {
   --color: #f1f6ff;
-  padding: 5rem 0 6rem 0;
+  padding: 5rem 1rem 6rem 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,22 +9,29 @@
   align-items: center;
   background-color: var(--color);
   font-size: calc(var(--rem-to-px) * 18);
-  grid-row: 2;
+  @media (max-width: $tablet) {
+    font-size: 14px;
+    padding: 2rem 0.5rem;
+  }
 
   &_center {
     align-self: stretch;
-    grid-row: -1/1;
     justify-self: center;
     background-color: var(--clr-blue-300);
   }
 
   &__name,
-  &__price,
-  &__value {
+  &__value,
+  &__price {
     font: var(--content-font-demibold);
     color: var(--clr-text-accent);
+    @media (max-width: $tablet) and (min-width: $phone) {
+      font-size: 20px;
+    }
   }
-
+  &__price {
+    font-size: 32px;
+  }
   &__value {
     display: block;
     font-weight: medium;
@@ -36,7 +43,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 75%;
+    // max-width: 75%;
 
     gap: 1rem;
     text-align: center;
