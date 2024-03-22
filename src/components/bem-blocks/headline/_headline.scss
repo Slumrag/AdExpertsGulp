@@ -1,6 +1,6 @@
 .headline {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+  // padding-top: 6rem;
+  // padding-bottom: 6rem;
   position: relative;
   display: grid;
   align-items: center;
@@ -8,20 +8,59 @@
   grid-template-columns: 57% minmax(60%, max-content);
   grid-template-rows: max-content;
   grid-auto-flow: row;
+
+  &__title {
+    /* max-width: 520px; */
+    line-height: 1.2;
+    margin-bottom: 3rem;
+    @media (max-width: $tablet) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__motto {
+    /* max-width: 675px; */
+    line-height: 1.25;
+    white-space: pre-line;
+  }
+
+  &__image {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1;
+  }
+
+  .bg-tile {
+    &:nth-child(2) {
+      --tile-position-x: 33%;
+      --tile-position-y: calc(var(--tile-size) * -0.5);
+
+      --tile-color: var(--clr-blue-800);
+    }
+
+    &:nth-child(3) {
+      --tile-position-x: calc(33% - var(--tile-size));
+      --tile-position-y: calc(var(--tile-size) * 0.5);
+
+      --tile-color: var(--clr-blue-600);
+    }
+
+    &:nth-child(4) {
+      --tile-position-x: 15%;
+      --tile-position-y: calc(85%);
+
+      --tile-color: var(--clr-blue-300);
+    }
+
+    &:nth-child(5) {
+      --tile-position-x: calc(15% - var(--tile-size));
+      --tile-position-y: calc(85% - var(--tile-size));
+
+      --tile-color: var(--clr-blue-100);
+    }
+  }
 }
 
-.headline__text {
-}
-.headline__title {
-  /* max-width: 520px; */
-  line-height: 1.2;
-  margin-bottom: 3rem;
-}
-.headline__motto {
-  /* max-width: 675px; */
-  line-height: 1.25;
-  white-space: pre-line;
-}
 .bg-image-wrapper {
   max-width: 700px;
   max-height: 700px;
@@ -29,34 +68,4 @@
 
   z-index: -2;
   object-fit: contain;
-}
-.headline__image {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 1;
-}
-
-.headline > .bg-tile:nth-child(2) {
-  --tile-position-x: 33%;
-  --tile-position-y: calc(var(--tile-size) * -0.5);
-
-  --tile-color: var(--clr-blue-800);
-}
-.headline > .bg-tile:nth-child(3) {
-  --tile-position-x: calc(33% - var(--tile-size));
-  --tile-position-y: calc(var(--tile-size) * 0.5);
-
-  --tile-color: var(--clr-blue-600);
-}
-.headline > .bg-tile:nth-child(4) {
-  --tile-position-x: 15%;
-  --tile-position-y: calc(85%);
-
-  --tile-color: var(--clr-blue-300);
-}
-.headline > .bg-tile:nth-child(5) {
-  --tile-position-x: calc(15% - var(--tile-size));
-  --tile-position-y: calc(85% - var(--tile-size));
-
-  --tile-color: var(--clr-blue-100);
 }
